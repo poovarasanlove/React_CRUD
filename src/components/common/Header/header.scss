@@ -1,0 +1,11 @@
+.content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	li{
+		display: inline;
+		padding: 10px;
+		margin: 0 10px;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,32 @@
+const crudreducer = (state = [],action) => {
+	switch (action.type){
+		case 'FETCH_DATA':
+			return action.data.jobs;
+		case 'Crud_Add_Post':
+			return [...state, action.data];
+		case 'Crud_Delete_Post':
+			return state.filter((post) => post.hashid !== action.id);
+		case 'Crud_Edit_Post':
+			return state.map((post)=> post.hashid === action.id ? {...post, editing :!post.editing}:{...post, editing:false});
+		case 'Crud_Update_Post':
+			return state.map((post)=> 
+				post.hashid === action.id ?
+				{...post,
+					company_name:action.data.newname,
+					url:action.data.newusername,
+					editing:!post.editing
+				}:post
+			);
+		case 'Crud_Cancel_Update_Post':
+			return state.map((post)=>
+				post.hashid === action.id ? 
+				{...post,
+					editing:!post.editing
+				}:post
+			);
+		default :
+			return state;
+	}
+}
+
+export default crudreducer;

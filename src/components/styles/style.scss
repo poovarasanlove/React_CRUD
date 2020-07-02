@@ -1,0 +1,99 @@
+$red: #ff5c33;
+$blue: #00BDF5;
+$green: #2AE800;
+$grey: #ECECEC;
+$yellow: #FFC902;
+$orange: #fc7f03;
+h1{
+	text-align: center;
+}
+.main{
+	&_con{
+		padding: 0 15px;
+		max-width: 1200px;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+.form{
+	display: inline-block;
+	padding: 40px 0;
+	input{
+		outline: 0;
+	}
+	&_element{
+		border: 0;
+		border-bottom: 1px solid $red;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	button{
+		margin: 0 10px;
+	}
+}
+.data{
+	&_table{
+		width: 100%;
+		padding: 15px 0;
+		border-collapse: collapse;
+		td{
+			padding: 15px;
+			border: 1px solid $red;
+			&:first-child{
+				border-left: 0;
+			}
+			&:last-child{
+				border-right: 0;
+			}
+		}
+		tr{
+			&:first-child{
+				td{
+					border-top: 0;
+				}
+			}
+			&:last-child{
+				td{
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	&_name{
+		text-transform: capitalize;
+	}
+	&_delete{
+		background: $red;
+	}
+	&_update{
+		background: $yellow;
+	}
+	&_submit{
+		background: $green;
+	}
+	&_clear{
+		background: $blue;
+	}
+	&_cancel{
+		background: $orange;
+	}
+}
+button{
+	border: 0;
+	box-shadow: 0px 0px 5px $grey;
+	cursor: pointer;
+	outline: 0;
+	color: white;
+	font-size: 16px;
+	line-height: 22px;
+	border-radius: 4px;
+	padding: 3px 15px;
+	min-width: 90px;
+}
+@media screen and (max-width: 1200px){
+	.main{
+		&_con{
+			max-width: 100%;
+		}
+	}
+}
