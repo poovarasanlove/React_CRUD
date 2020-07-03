@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "acorn": "^7.3.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^3.4.2",
     "history": "^4.10.1",
@@ -25,7 +26,8 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.0.2",
-    "styles-loader": "^1.0.2"
+    "styles-loader": "^1.0.2",
+    "websocket-extensions": "^0.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
