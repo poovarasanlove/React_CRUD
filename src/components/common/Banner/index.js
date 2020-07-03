@@ -6,7 +6,7 @@ class Banner extends Component{
 		const {className,imagename} = this.props;
 		console.log(imagename);
 		var images = {
-			 width: "100%",
+			 width: "90%",
 			 backgroundImage: `url(${imagename})`
 		}
 		return(
