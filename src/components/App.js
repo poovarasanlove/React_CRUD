@@ -13,17 +13,15 @@ import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 class App extends Component {
    render() {
       return (
-         <div className="main_con">
-            <Router>
-               <Header />
-               <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/Form" component={CrudForm} />
-                  <Route path="/Dashboard" component={Dashboard} />
-                  <Route path="/Contact" component={Contact} />
-               </Switch>
-            </Router>
-         </div>
+         <Router>
+            <Header />
+            <Switch>
+               <Route exact path="/" component={Home} />
+               <Route path="/Form" component={CrudForm} />
+               <Route path="/Dashboard" component={Dashboard} />
+               <Route path="/Contact" component={Contact} />
+            </Switch>
+         </Router>
       );
    }
 }

@@ -10,13 +10,23 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.(svg|jpe?g|png|eot|ttf|woff|woff2?)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'static/[name]-[hash:8].[ext]',
+					},
+				},
+			},
 			{	
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: [ 'style-loader', 'css-loader', 'sass-loader' ]
 			},
 			{
-				test:/\.js$/,
+				test:/\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'

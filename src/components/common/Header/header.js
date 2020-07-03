@@ -13,7 +13,7 @@ class Header extends Component{
 	render(){
 		const list = ['Home','Form','Dashboard','Contact']
 		return(
-			<div>
+			<div className="main_con">
 				<Title title={this.state.title} list={list} />
 			</div>
 		);
